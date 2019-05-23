@@ -19,7 +19,7 @@ class Question extends Model
 
 
     protected $fillable = [
-        'question',
+        'body',
         'difficulty',
         'clue'
     ];

@@ -21,31 +21,43 @@
                                     <input type="text" name="body">
                                 </label>
                             </div>
-                            <div class="row">
 
-                                <label for="goodanswer">Bonne réponse
-                                    <input type="text" name="goodanswer">
+                            <div class="row">
+                                <label for="clue">Indice
+                                    <input type="text" name="clue">
+                                </label>
+                            </div>
+
+                            <div class="row">
+                                <label for="difficulty">Difficulté
+                                    <input type="text" name="difficulty">
+                                </label>
+                            </div>
+
+                            <div class="row">
+                                <label for="solution">Solution
+                                    <input type="text" name="solution">
                                 </label>
                             </div>
 
                             <div class="row">
 
-                                <label for="badanswer1">Mauvaise réponse n°1
-                                    <input type="text" name="badanswer1">
+                                <label for="answer1">Mauvaise réponse n°1
+                                    <input type="text" name="answer1">
                                 </label>
                             </div>
 
                             <div class="row">
 
-                                <label for="badanswer2">Mauvaise réponse n°2
-                                    <input type="text" name="badanswer2">
+                                <label for="answer2">Mauvaise réponse n°2
+                                    <input type="text" name="answer2">
                                 </label>
                             </div>
 
                             <div class="row">
 
-                                <label for="badanswer3">Mauvaise réponse n°3
-                                    <input type="text" name="badanswer3">
+                                <label for="answer3">Mauvaise réponse n°3
+                                    <input type="text" name="answer3">
                                 </label>
                             </div>
 

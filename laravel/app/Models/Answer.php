@@ -10,7 +10,7 @@ class Answer extends Model
 
 
     protected $fillable = [
-        'answer',
+        'body',
         'is_correct',
     ];
 
