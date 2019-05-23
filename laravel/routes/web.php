@@ -24,10 +24,25 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/options', 'ViewController@showOptions')->name('options');
+
+
 Route::get('/editquestion', 'ViewController@showEditQuestion')->name('editquestion');
+
+
 Route::get('/newgame', 'ViewController@showNewGame')->name('newgame');
+
+
 Route::get('/newquestion', 'ViewController@showNewQuestion')->name('newquestion');
+Route::post('/newquestion', 'QuestionController@newQuestion')->name('newquestion.post');
+
+
 Route::get('/oneplayer', 'ViewController@showOnePlayer')->name('oneplayer');
+
+
 Route::get('/game', 'ViewController@showGame')->name('game');
+
+
 Route::get('/result', 'ViewController@showResult')->name('result');
+
+
 

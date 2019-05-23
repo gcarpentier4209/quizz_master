@@ -14,6 +14,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Topics extends Model
 {
-    use SoftDeletes;
-    protected $fillable = ['title'];
+    protected $table = 'topics';
+
+
+    protected $fillable = [
+        'title',
+    ];
+
+    public function questions() {
+        return $this->hasMany(Question::class);
+    }
 }
