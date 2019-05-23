@@ -86,7 +86,7 @@
 
                 <div class="links">
                     <a href="{{route("newgame")}}">Nouvelle Partie</a>
-                    <a href="{{route("editquestion")}}">Éditeur de question</a>
+                    <a href="{{route("questions")}}">Éditeur de question</a>
                     <a href="{{route("options")}}">Options</a>
 
                 </div>

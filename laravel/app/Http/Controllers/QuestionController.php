@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class QuestionController extends Controller
 {
-    public function index()
+    public function showAll()
     {
         $questions = Question::all();
         return view('question.index')->with(compact('questions'));
@@ -24,28 +24,27 @@ class QuestionController extends Controller
     {
 
         $question = new Question;
-        $solution = new Answer;
-        $answer1 = new Answer;
-        $answer2 = new Answer;
-        $answer3 = new Answer;
 
-//        $post->comments()->saveMany([
-//            new App\Comment(['message' => 'A new comment.']),
-//            new App\Comment(['message' => 'Another comment.']),
-//        ]);
 
-        $question->question = $request->input('question');
+        $question->body = $request->input('body');
         $question->clue = $request->input("clue");
+        $question->difficulty = $request->input("difficulty");
 
         $question->save();
 
-        $question->answers()->sync($request->get('answer'));
+        $question->answers()->saveMany([
+            new Answer(['id_question'=> Question::all()->last(),'body' => $request->solution]),
+            new Answer(['id_question'=> Question::all()->last(),'body' => $request->answer1]),
+            new Answer(['id_question'=> Question::all()->last(),'body' => $request->answer2]),
+            new Answer(['id_question'=> Question::all()->last(),'body' => $request->answer3]),
+        ]);
+
 
         return redirect('/questions');
 
     }
 
-    public function show($id)
+    public function showOne($id)
     {
         $question = Question::where('id', $id)->first();
 
