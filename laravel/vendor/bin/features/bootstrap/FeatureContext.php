@@ -7,6 +7,8 @@ use Behat\Behat\Tester\Exception\PendingException;
 use Behat\Behat\Context\Context;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
+use Behat\Mink\Driver\GoutteDriver;
+
 
 /**
  * Defines application features from the specific context.
@@ -17,6 +19,11 @@ use Behat\Gherkin\Node\TableNode;
 
 class FeatureContext implements Context
 {
+
+    private $driver;
+    private $session;
+    private $button;
+
     /**
      * Initializes context.
      *
@@ -30,37 +37,23 @@ class FeatureContext implements Context
     
     public function __construct()
     {
-        $this->url='/questions/new';
+
+        $this->button = [
+            "options"=>"http://localhost/imie/cours/test/quizz_master/laravel/public/options",
+            ];
+        $this->driver = new GoutteDriver();
+        $this->session = new \Behat\Mink\Session($this->driver);
+
+        $this->session->start();
     }
 
- 
-
     /**
-     * @Given I am logged in as User
+     * @Given I am logged in as user
      */
     public function iAmLoggedInAsUser()
     {
         return true;
-    }
 
-    /**
-     * @When I press :arg1
-     */
-    public function iPress($url)
-    {
-        //$this->getSession()->visit($this->localPath('/questions/new'));
-        $this->get('/questions/new');
-
-    }
-
-    /**
-     * @Then I should see :arg1
-     */
-    public function iShouldSee($status)
-    {
-        $this->iPress('/questions/new')->assertStatus(200);
-
-//        $response->assertStatus(200);
     }
 
     /**
@@ -184,19 +177,20 @@ class FeatureContext implements Context
     }
 
     /**
-     * @When I add a new topic
+     * @When I press   :arg1
      */
-    public function iAddANewTopic()
+    public function iPress($button)
     {
-        throw new PendingException();
+        $url = $this->button[$button];
+        $this->session->visit($url);
     }
 
     /**
-     * @Then the title topic is not null
+     * @Then I should see :arg1
      */
-    public function theTitleTopicIsNotNull()
+    public function iShouldSee($status)
     {
-        throw new PendingException();
+        $status = 200;
+        PHPUnit\Framework\Assert::assertEquals($this->session->getStatusCode(), $status);
     }
-
 }

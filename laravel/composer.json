@@ -17,6 +17,8 @@
         "behat/behat": "^3.5",
         "behat/mink": "^1.7",
         "behat/mink-extension": "^2.3",
+        "behat/mink-goutte-driver": "~1.2",
+        "behat/mink-selenium2-driver": "~1.2",
         "beyondcode/laravel-dump-server": "^1.0",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
