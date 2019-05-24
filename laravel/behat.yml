@@ -5,3 +5,7 @@ default:
     Behat\MinkExtension:
       default_session: laravel
       laravel: ~
+
+    Behat\MinkExtension\Extension:
+      goutte: ~
+      selenium2: ~
