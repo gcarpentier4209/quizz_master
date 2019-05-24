@@ -226,4 +226,196 @@ class FeatureContext implements Context
 
 
 
+
+    /**
+     * @Given Application is in English
+     */
+    public function applicationIsInEnglish()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then Application is in French
+     */
+    public function applicationIsInFrench()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Given sound is enable
+     */
+    public function soundIsEnable()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I check  sound :arg1
+     */
+    public function iCheckSound($arg1)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then Sound is disabled
+     */
+    public function soundIsDisabled()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I press :arg1
+     */
+    public function iPress2($arg1)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Given no question
+     */
+    public function noQuestion()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I post the body of my question :arg1
+     */
+    public function iPostTheBodyOfMyQuestion($arg1)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I add an level difficulty
+     */
+    public function iAddAnLevelDifficulty()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I add a soluce
+     */
+    public function iAddASoluce()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I add a :arg1 wrong answers
+     */
+    public function iAddAWrongAnswers($arg1)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then the question is create
+     */
+    public function theQuestionIsCreate()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Given I choose the question
+     */
+    public function iChooseTheQuestion()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I can change the body of my question
+     */
+    public function iCanChangeTheBodyOfMyQuestion()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I can change the level difficulty
+     */
+    public function iCanChangeTheLevelDifficulty()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I can change the soluce
+     */
+    public function iCanChangeTheSoluce()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I can change the wrong answers
+     */
+    public function iCanChangeTheWrongAnswers()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then the question can be updated
+     */
+    public function theQuestionCanBeUpdated()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I clik on the button :arg1
+     */
+    public function iClikOnTheButton($arg1)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Then the question is delete in the Database
+     */
+    public function theQuestionIsDeleteInTheDatabase()
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Given I am on page :arg1
+     */
+    public function iAmOnPage($arg1)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I fill in :arg1 with :arg2
+     */
+    public function iFillInWith($arg1, $arg2)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I select :arg1 from :arg2
+     */
+    public function iSelectFrom($arg1, $arg2)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When I select :arg1  rom :arg2
+     */
+    public function iSelectRom($arg1, $arg2)
+    {
+        throw new PendingException();
+    }
 }
