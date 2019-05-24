@@ -1,9 +1,9 @@
-Feature: As User I can navigate in the application
-
-  Scenario: User go to new game page
-    Given I am logged in as user
-    When I press   "options"
-    Then  I should see "Option"
+#Feature: As User I can navigate in the application
+#
+#  Scenario: User go to new game page
+#    Given I am logged in as user
+#    When I press   "options"
+#    Then  I should see "Option"
 
 #  Scenario: User go to new game page
 #    Given I am logged in as User
