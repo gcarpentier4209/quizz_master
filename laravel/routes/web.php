@@ -37,6 +37,7 @@ Route::get('/questions', 'QuestionController@showAll')->name('questions');
 
 Route::get('/questions/new', 'QuestionController@showCreate')->name('create.question');
 Route::post('/questions/new', 'QuestionController@create')->name('create.question.post');
+Route::get('/questions/edit/{question}', 'QuestionController@showUpddate')->name('update.question');
 
 
 Route::get('/oneplayer', 'ViewController@showOnePlayer')->name('oneplayer');

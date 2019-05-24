@@ -3,9 +3,9 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header">Dashboard</div>
+                    <div class="card-header">Liste des questions</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -13,16 +13,17 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-
-                        EDIT QUESTIONS
-
+                        <a href="{{route("create.question")}}" class="btn btn-xs btn-primary" dark>ADD New question</a>
 
                         <table>
                             <thead>
                             <tr>
                                 <th>Question</th>
-                                <th>Answer</th>
                                 <th>Difficulty</th>
+                                <th>id_topic</th>
+                                <th>answers</th>
+                                <th>Edition</th>
+
                             </tr>
                             </thead>
                             <tbody>
@@ -30,15 +31,23 @@
 
                                 <tr>
                                     <td>{{$question->body}}</td>
-                                    <td>...</td>
                                     <td>{{$question->difficulty}}</td>
+                                    <td>{{$question->id_topic}}</td>
+                                    <td>
+                                        <ul>
+                                            @foreach($question->answers as $answer)
+                                                <li @if( $answer->is_correct) style="color: green" @endif>{{$answer->body}}   </li>
+                                            @endforeach
+                                        </ul>
+
+                                    <td><a href="{{route("update.question",['question'=> $answer->id])}}"
+                                           class="btn btn-xs btn-primary">modifier</a></td>
+                                    <td><a href="" class="btn btn-xs btn-danger">supprimer</a></td>
                                 </tr>
                             @endforeach
                             </tbody>
                         </table>
 
-
-                        <a href="{{route("create.question")}}">New question</a>
                     </div>
                 </div>
             </div>

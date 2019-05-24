@@ -16,7 +16,6 @@ class Topics extends Model
 {
     protected $table = 'topics';
 
-
     protected $fillable = [
         'title',
     ];
